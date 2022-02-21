@@ -1,11 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Title from './Components/Title';
 import ToDoList from './Components/ToDoList';
 import Form from './Components/Form'
 
 function App() {
+  const input: HTMLInputElement = document.querySelector('.input')!
+
   return (
     <>
       <Title></Title>
