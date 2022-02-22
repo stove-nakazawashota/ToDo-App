@@ -1,13 +1,15 @@
 import React from 'react'
 
 const Form = () => {
-    const input: HTMLInputElement = document.querySelector('.input')!
-
     return (
         <>
             <div className='box'>
                 <input className='input'></input>
-                <button className='button'>Todoを作成</button>
+                <input className='submit-button'
+                    type="submit"
+                    value="ToDoを作成"
+                    onSubmit={(e) => e.preventDefault()}
+                />
             </div>
         </>
     )
