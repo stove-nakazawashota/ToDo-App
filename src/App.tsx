@@ -2,28 +2,12 @@ import './App.css';
 import Title from './Components/Title';
 import React, { useState } from 'react';
 import ToDoList from './Components/ToDoList';
-import Form from './Components/Form'
-import { Task } from './Components/Task'
-
-type Todo = {
-  text: string
-}
-
-const initialState: Task[] = [
-  {
-    title: "テスト"
-  },
-  {
-    title: "テスト2"
-  }
-]
-
-// const [text, setText] = useState<string>('aaa')
-
+import Form from './Components/Form';
+import data from './data.json';
 
 function App() {
-  const [tasks, setTasks] = useState(initialState)
 
+  const [taskList, setTaskList] = useState(data);
   return (
     <>
       <Title></Title>
