@@ -4,13 +4,19 @@ type ToDo = {
     id: number
 }
 
-const ToDoList = (props: ToDo) => {
+type PropsType = {
+    taskList: ToDo[]
+}
+
+const ToDoList = (props: PropsType) => {
     return (
         <>
             <ul className='todos'>
-                <li className='todo'>{props.title}</li>
-                <li className='todo'>ToDo2</li>
-                <li className='todo'>ToDo3</li>
+                {props.taskList.map((value) => {
+                    return (
+                        <li className="todo" key={value.id}>{value.title}</li>
+                    )
+                })}
             </ul>
         </>
     )

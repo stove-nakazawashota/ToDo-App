@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <Title></Title>
-      <ToDoList></ToDoList>
+      <ToDoList taskList={taskList}></ToDoList>
       <Form></Form>
     </>
   );
