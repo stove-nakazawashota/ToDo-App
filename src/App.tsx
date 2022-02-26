@@ -5,9 +5,13 @@ import ToDoList from './Components/ToDoList';
 import Form from './Components/Form';
 import data from './data.json';
 
-function App() {
+type ToDo = {
+  title: string,
+  id: number
+}
 
-  const [taskList, setTaskList] = useState(data);
+function App() {
+  const [taskList, setTaskList] = useState<ToDo[]>(data);
   return (
     <>
       <Title></Title>
