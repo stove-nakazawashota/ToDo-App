@@ -1,26 +1,20 @@
 [
     {
-        "title": "test,test,test",
-        "finished": true
+        "title": "test,test,test"
     },
     {
-        "title": "test2,test2,test2",
-        "finished": false
+        "title": "test2,test2,test2"
     },
     {
-        "title": "test3,test3,test3",
-        "finished": true
+        "title": "test3,test3,test3"
     },
     {
-        "title": "test4,test4,test4",
-        "finished": false
+        "title": "test4,test4,test4"
     },
     {
-        "title": "test5,test5,test5",
-        "finished": true
+        "title": "test5,test5,test5"
     },
     {
-        "title": "test6,test6,test6",
-        "finished": false
+        "title": "test6,test6,test6"
     }
 ]
