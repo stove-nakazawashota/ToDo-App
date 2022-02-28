@@ -1,11 +1,10 @@
 import React from 'react'
 
-const Form = () => {
+type TaskType = {
+    addTaskList: () => void
+}
 
-    const test = () => {
-        console.log("AAA")
-    }
-
+const Form = (props: TaskType) => {
     return (
         <>
             <div className='box'>
@@ -14,13 +13,12 @@ const Form = () => {
                         e.preventDefault();
                     }}
                 ></form>
-                <input className='input' type="text"></input>
+                <input className='textinput' type="text"></input>
                 <input className='submit-button'
                     type="submit"
                     value="ToDoを作成"
                     onSubmit={(e) => e.preventDefault()}
-                    onClick={() => test()}
-
+                    onClick={props.addTaskList}
                 />
             </div>
         </>

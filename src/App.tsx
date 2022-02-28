@@ -1,9 +1,9 @@
-import './App.css';
-import Title from './Components/Title';
-import React, { useState } from 'react';
-import ToDoList from './Components/ToDoList';
-import Form from './Components/Form';
 import data from './data.json';
+import Form from './Components/Form';
+import React, { useState } from 'react';
+import Title from './Components/Title';
+import ToDoList from './Components/ToDoList';
+import './App.css';
 
 type ToDo = {
   title: string,
@@ -12,11 +12,23 @@ type ToDo = {
 
 function App() {
   const [taskList, setTaskList] = useState<ToDo[]>(data);
+  const addTaskList = () => {
+    const newId = taskList.length + 1
+    const textInput: HTMLInputElement = document.querySelector('.input')!
+    const newTitle: string = textInput.value
+    const newTask: ToDo = {
+      id: newId,
+      title: newTitle
+    }
+    setTaskList([...taskList, newTask])
+  }
+
+
   return (
     <>
       <Title></Title>
       <ToDoList taskList={taskList}></ToDoList>
-      <Form></Form>
+      <Form addTaskList={addTaskList}></Form>
     </>
   );
 }
