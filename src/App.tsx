@@ -14,7 +14,7 @@ function App() {
   const [taskList, setTaskList] = useState<ToDo[]>(data);
   const addTaskList = () => {
     const newId = taskList.length + 1
-    const textInput: HTMLInputElement = document.querySelector('.input')!
+    const textInput: HTMLInputElement = document.querySelector('.textinput')!
     const newTitle: string = textInput.value
 
     const newTask: ToDo = {
