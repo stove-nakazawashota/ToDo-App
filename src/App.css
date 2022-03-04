@@ -6,21 +6,27 @@ li {
   text-align: center;
 }
 
-.todos {
+/* .todos {
   margin: 0 auto;
   display: block;
   width: 1000px;
   padding: 40px;
   text-align: center;
   border: solid 1px #000;
-}
+} */
 
 .todo {
-  margin: 30px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: block;
   padding: 10px;
+  width: 400px;
   border: solid 1px #000;
 }
 
+.check {
+  display: flex;
+}
 
 .textinput {
   padding: 50px;
