@@ -14,7 +14,7 @@ const ToDo = (props: PropsType) => {
             {props.taskList.map((value) => {
                 return (
                     <>
-                        <input type="checkbox" name="checkbox" className="check"></input>
+                        <input type="checkbox" name="checkbox" value={value.id} className="check"></input>
                         <li className="todo" key={value.id}>{value.title}</li>
                     </>
                 )

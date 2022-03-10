@@ -27,9 +27,18 @@ function App() {
     }
     setTaskList([...taskList, newTask])
   }
+
+  const deleteToDo = () => {
+    setTaskList(
+      taskList.filter((addTaskList) => (taskList !== taskList))
+    )
+  }
+
   const test = () => {
     const Check: HTMLInputElement = document.querySelector(".check")!
+
     if (Check.checked) {
+      deleteToDo()
       console.log("Hello")
     }
   }
