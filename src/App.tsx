@@ -27,7 +27,6 @@ function App() {
     }
     setTaskList([...taskList, newTask])
   }
-
   const test = () => {
     const Check: HTMLInputElement = document.querySelector(".check")!
     if (Check.checked) {
