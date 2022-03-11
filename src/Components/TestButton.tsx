@@ -1,11 +1,11 @@
 type PropsType = {
-    test: () => void
+    deleteToDo: () => void
 }
 
 const TestButton = (props: PropsType) => {
     return (
         <>
-            <button onClick={props.test}>テスト</button>
+            <button onClick={props.deleteToDo}>テスト</button>
         </>
     )
 }
