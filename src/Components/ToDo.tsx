@@ -1,4 +1,3 @@
-
 type ToDo = {
     title: string,
     id: number
@@ -7,7 +6,6 @@ type ToDo = {
 type PropsType = {
     taskList: ToDo[]
 }
-
 const ToDo = (props: PropsType) => {
     return (
         <>

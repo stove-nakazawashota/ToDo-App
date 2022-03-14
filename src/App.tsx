@@ -12,16 +12,14 @@ import TestButton from './Components/TestButton';
 //   id: number
 // }
 
-
-
 function App() {
 
   const [taskList, setTaskList] = useState<ToDo[]>(data);
   const addTaskList = () => {
-    const newId = taskList.length + 1
-    const textInput: HTMLInputElement = document.querySelector('.textinput')!
-    const newTitle: string = textInput.value
-    const newTask: ToDo = {
+    const newId = taskList.length + 1 // idを＋１する
+    const textInput: HTMLInputElement = document.querySelector('.textinput')! // フォームの値を取得する
+    const newTitle: string = textInput.value // textinputのvalueを取得する
+    const newTask: ToDo = { // 
       id: newId,
       title: newTitle
     }
@@ -30,14 +28,12 @@ function App() {
 
 
   const deleteToDo = () => {
-    const getChecked: NodeListOf<HTMLInputElement> = document.querySelectorAll('.check')!
-    const newToDo: ToDo[] = taskList
-    for (let i = 0; i < getChecked.length; i++) {
-      if (getChecked[i].checked === true) {
-        newToDo.filter((Task) => (getChecked[i].value !== Task.id.toString()))
-        console.log(newToDo)
-        console.log(getChecked[i].value)
-        console.log(newToDo[i].id.toString())
+    const getChecked: NodeListOf<HTMLInputElement> = document.querySelectorAll('.check')! // inputのチェックボックスを全て取得
+    let newToDo: ToDo[] = taskList
+    for (let i = 0; i < getChecked.length; i++) { //  ループ処理
+      if (getChecked[i].checked === true) { // もしチェックがついていたら
+        newToDo = newToDo.filter((Task) => (getChecked[i].value !== Task.id.toString())) // getCheckedでdata.jsonのIDと比較して、チェックの付いたToDoを消す
+        getChecked[i].checked = false // チェックを外す
       }
     }
     setTaskList(
@@ -46,14 +42,6 @@ function App() {
   }
   // console.log(taskList)
   // taskList.filter((Task) => (getChecked[i].value !== Task.id.toString()))
-
-  // const test = () => {
-  //   const Check: HTMLInputElement = document.querySelector(".check")!
-  //   if (Check.checked) {
-  //     deleteToDo()
-  //     console.log("Hello")
-  //   }
-  // }
 
   return (
     <>

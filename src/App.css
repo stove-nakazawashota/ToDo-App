@@ -6,15 +6,6 @@ li {
   text-align: center;
 }
 
-/* .todos {
-  margin: 0 auto;
-  display: block;
-  width: 1000px;
-  padding: 40px;
-  text-align: center;
-  border: solid 1px #000;
-} */
-
 .todo {
   margin: 0 auto;
   margin-bottom: 30px;
@@ -26,6 +17,7 @@ li {
 
 .check {
   margin-left: 350px;
+  display: flex;
 }
 
 .textinput {
@@ -35,6 +27,11 @@ li {
 }
 
 .submit-button {
+  margin: 0 auto;
+  display: block;
+}
+
+.delete-todo {
   margin: 0 auto;
   display: block;
 }
